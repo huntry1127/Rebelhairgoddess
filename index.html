@@ -15,7 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@400;500;600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="grain" aria-hidden="true"></div>
   <div class="announcement">Now welcoming new guests <span>✦</span> Wheaton, Illinois</div>
 
@@ -36,7 +37,7 @@
     </nav>
   </header>
 
-  <main id="top">
+  <main id="main-content">
     <section class="hero">
       <div class="hero-copy">
         <span class="star-mark" aria-hidden="true">✦</span>
@@ -51,7 +52,7 @@
         </div>
       </div>
       <div class="hero-visual">
-        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1500&q=88" alt="Long dimensional brunette hair">
+        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1500&q=88" alt="Long dimensional brunette hair" fetchpriority="high" decoding="async">
         <div class="image-card">
           <span>Same girl...</span>
           <strong>just better hair.</strong>
@@ -63,7 +64,7 @@
       <span>High-end</span><b>✦</b><span>Approachable</span><b>✦</b><span>Unapologetically you</span>
     </section>
 
-    <section id="services" class="services section">
+    <section id="services" class="services section reveal">
       <div class="section-intro">
         <p class="eyebrow">The service menu</p>
         <h2>Consider this<br>your <em>sign.</em></h2>
@@ -71,18 +72,18 @@
         <a class="text-link" data-booking-link href="https://www.glossgenius.com/" target="_blank" rel="noopener">Not sure what to book?</a>
       </div>
       <div class="service-grid">
-        <article><span>01</span><h3>Dimensional Color</h3><p>Customized depth, brightness, and tone with a seamless grow-out.</p><strong>From $225</strong></article>
-        <article><span>02</span><h3>Blonding</h3><p>Intentional brightness ranging from softly lived-in to boldly blonde.</p><strong>From $275</strong></article>
-        <article><span>03</span><h3>Brunettes</h3><p>Rich, glossy color with movement, dimension, and lasting shine.</p><strong>From $185</strong></article>
-        <article><span>04</span><h3>Grey Coverage</h3><p>Modern coverage or graceful blending tailored to your preference.</p><strong>From $165</strong></article>
-        <article><span>05</span><h3>Extensions</h3><p>Luxury length and fullness with discreet, natural-looking results.</p><strong>Consultation</strong></article>
-        <article><span>06</span><h3>Haircuts & Treatments</h3><p>Shape, movement, repair, and the polished finish your hair deserves.</p><strong>From $85</strong></article>
+        <article><span>01</span><h3>Dimensional Color</h3><p>Customized depth, brightness, and tone with a seamless grow-out.</p><strong>From $225</strong><a class="service-link" data-booking-link href="https://www.glossgenius.com/" target="_blank" rel="noopener" aria-label="Book dimensional color">Explore service <b>↗</b></a></article>
+        <article><span>02</span><h3>Blonding</h3><p>Intentional brightness ranging from softly lived-in to boldly blonde.</p><strong>From $275</strong><a class="service-link" data-booking-link href="https://www.glossgenius.com/" target="_blank" rel="noopener" aria-label="Book blonding">Explore service <b>↗</b></a></article>
+        <article><span>03</span><h3>Brunettes</h3><p>Rich, glossy color with movement, dimension, and lasting shine.</p><strong>From $185</strong><a class="service-link" data-booking-link href="https://www.glossgenius.com/" target="_blank" rel="noopener" aria-label="Book brunette color">Explore service <b>↗</b></a></article>
+        <article><span>04</span><h3>Grey Coverage</h3><p>Modern coverage or graceful blending tailored to your preference.</p><strong>From $165</strong><a class="service-link" data-booking-link href="https://www.glossgenius.com/" target="_blank" rel="noopener" aria-label="Book grey coverage">Explore service <b>↗</b></a></article>
+        <article><span>05</span><h3>Extensions</h3><p>Luxury length and fullness with discreet, natural-looking results.</p><strong>Consultation</strong><a class="service-link" data-booking-link href="https://www.glossgenius.com/" target="_blank" rel="noopener" aria-label="Book an extensions consultation">Explore service <b>↗</b></a></article>
+        <article><span>06</span><h3>Haircuts & Treatments</h3><p>Shape, movement, repair, and the polished finish your hair deserves.</p><strong>From $85</strong><a class="service-link" data-booking-link href="https://www.glossgenius.com/" target="_blank" rel="noopener" aria-label="Book a haircut or treatment">Explore service <b>↗</b></a></article>
       </div>
     </section>
 
-    <section id="about" class="about section">
+    <section id="about" class="about section reveal">
       <div class="about-image">
-        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1300&q=88" alt="Stylist in an intimate modern salon">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1300&q=88" alt="Stylist in an intimate modern salon" loading="lazy" decoding="async">
         <div class="monogram"><span>R</span><b>H</b><span>G</span></div>
       </div>
       <div class="about-copy">
@@ -96,26 +97,26 @@
       </div>
     </section>
 
-    <section id="work" class="work section">
+    <section id="work" class="work section reveal">
       <div class="work-heading">
         <div><p class="eyebrow">Recent work</p><h2>Good hair.<br><em>Better energy.</em></h2></div>
         <a class="text-link" href="#" aria-label="Visit Rebel Hair Goddess Instagram">Follow @rebelhairgoddess</a>
       </div>
       <div class="gallery">
-        <figure class="portrait"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=900&q=88" alt="Dimensional brunette hairstyle"></figure>
-        <figure><img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=900&q=88" alt="Textured blonde hairstyle"></figure>
-        <figure><img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=900&q=88" alt="Long polished hair"></figure>
+        <figure class="portrait"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=900&q=88" alt="Dimensional brunette hairstyle" loading="lazy" decoding="async"></figure>
+        <figure><img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=900&q=88" alt="Textured blonde hairstyle" loading="lazy" decoding="async"></figure>
+        <figure><img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=900&q=88" alt="Long polished hair" loading="lazy" decoding="async"></figure>
       </div>
     </section>
 
-    <section class="testimonial section">
+    <section class="testimonial section reveal">
       <span class="star-mark">✦</span>
       <p class="script">A good hair day changes everything.</p>
       <blockquote>“The color is rich, dimensional, and somehow looks better every week. I finally feel like myself again.”</blockquote>
       <p class="client">— Placeholder client <span>★★★★★</span></p>
     </section>
 
-    <section id="contact" class="contact section">
+    <section id="contact" class="contact section reveal">
       <div>
         <p class="eyebrow">By appointment only · Wheaton, IL</p>
         <h2>Same girl.<br><em>Just better hair.</em></h2>
