@@ -1,56 +1,18 @@
-document.documentElement.classList.add("js");
-
-// Replace this single URL when the client's GlossGenius booking page is ready.
+// Replace once the client's direct GlossGenius booking URL is confirmed.
 const GLOSSGENIUS_BOOKING_URL = "https://www.glossgenius.com/";
-
-document.querySelectorAll("[data-booking-link]").forEach((link) => {
-  link.href = GLOSSGENIUS_BOOKING_URL;
-});
-
-const menuButton = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".site-nav");
-const menuLabel = menuButton?.querySelector(".sr-only");
-
+document.querySelectorAll('[data-booking-link]').forEach(link => { link.href = GLOSSGENIUS_BOOKING_URL; });
+const button = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.site-nav');
 function setMenu(open) {
-  menuButton?.setAttribute("aria-expanded", String(open));
-  nav?.classList.toggle("open", open);
-  document.body.classList.toggle("menu-open", open);
-  if (menuLabel) menuLabel.textContent = open ? "Close menu" : "Open menu";
+  button?.setAttribute('aria-expanded', String(open));
+  nav?.classList.toggle('open', open);
+  const label = button?.querySelector('.sr-only');
+  if (label) label.textContent = open ? 'Close menu' : 'Open menu';
 }
-
-menuButton?.addEventListener("click", () => {
-  setMenu(menuButton.getAttribute("aria-expanded") !== "true");
-});
-
-nav?.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => setMenu(false));
-});
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") setMenu(false);
-});
-
-const header = document.querySelector(".site-header");
-const updateHeader = () => header?.classList.toggle("scrolled", window.scrollY > 24);
-updateHeader();
-window.addEventListener("scroll", updateHeader, { passive: true });
-
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const reveals = document.querySelectorAll(".reveal");
-
-if (reducedMotion || !("IntersectionObserver" in window)) {
-  reveals.forEach((section) => section.classList.add("is-visible"));
-} else {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08 });
-  reveals.forEach((section) => observer.observe(section));
-}
-
-const year = document.getElementById("year");
+button?.addEventListener('click', () => setMenu(button.getAttribute('aria-expanded') !== 'true'));
+nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', event => { if (event.key === 'Escape') { const open = button?.getAttribute('aria-expanded') === 'true'; setMenu(false); if (open) button.focus(); } });
+document.addEventListener('click', event => { if (!event.target.closest('.site-header')) setMenu(false); });
+window.matchMedia('(min-width: 761px)').addEventListener('change', () => setMenu(false));
+const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();

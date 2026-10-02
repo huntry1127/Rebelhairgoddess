@@ -1,29 +1,16 @@
 # Rebel Hair Goddess
 
-A bold, responsive editorial salon website built for an independent hair artist.
+Responsive beauty-brand site with an ivory, dusty pink and espresso visual identity. The homepage includes a statement hero, personal introduction, text-led service overview, extensions and booking. `services.html` provides a readable menu over one faint editorial photograph.
 
-## Included
+## Client details to finish
 
-- Responsive desktop and mobile layouts
-- Services, stylist bio, gallery, testimonial, and contact sections
-- Mobile navigation and persistent mobile booking button
-- Centralized GlossGenius booking URL
-- Placeholder content for salon information and pricing
+- Replace `GLOSSGENIUS_BOOKING_URL` in `script.js` with Danielle’s exact booking link. It is currently the general GlossGenius homepage.
+- Confirm the service names and pricing in `services.html`; values are deliberately marked TBD until approved.
+- The new editorial portrait and studio mood image are AI-generated design assets from the approved concept. They do not show Danielle, actual client results, or her actual studio. Replace the studio inspiration image with approved photography when available.
+- The About wording is the approved draft. Confirm it with Danielle before the final business launch.
+- Branding is a typographic treatment using Playfair Display, Montserrat and Mrs Saint Delafield. Replace with original brand logo/font assets if provided.
+- Real Instagram work remains in `images/` for future use, but the homepage no longer includes a portfolio gallery.
 
-## Connect GlossGenius
+## Publishing
 
-Open `script.js` and replace:
-
-```js
-const GLOSSGENIUS_BOOKING_URL = "https://www.glossgenius.com/";
-```
-
-with the client's direct GlossGenius booking URL. Every booking button will update automatically.
-
-## Replace placeholders
-
-Search `index.html` for `Your`, `Placeholder`, `123 Rebel Avenue`, and `#` links. Replace the example service prices, biography, testimonial, address, Instagram, policies, and images with approved client content.
-
-## Publish with GitHub Pages
-
-In the GitHub repository, open **Settings → Pages**, choose **Deploy from a branch**, select **main** and **/(root)**, then save.
+The existing GitHub Actions workflow publishes changes pushed to `main` to GitHub Pages. No build step is required.
