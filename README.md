@@ -6,7 +6,7 @@ Responsive beauty-brand site with an ivory, dusty pink and espresso visual ident
 
 - Replace `GLOSSGENIUS_BOOKING_URL` in `script.js` with Danielle’s exact booking link. It is currently the general GlossGenius homepage.
 - Confirm the service names and pricing in `services.html`; values are deliberately marked TBD until approved.
-- The new editorial portrait and studio mood image are AI-generated design assets from the approved concept. They do not show Danielle, actual client results, or her actual studio. Replace the studio inspiration image with approved photography when available.
+- The editorial portraits (including the services-page hat portrait) and studio mood image are AI-generated design assets from the approved concept. They do not show Danielle, actual client results, or her actual studio. Replace the studio inspiration image with approved photography when available.
 - The About wording is the approved draft. Confirm it with Danielle before the final business launch.
 - Branding is a typographic treatment using Playfair Display, Montserrat and Mrs Saint Delafield. Replace with original brand logo/font assets if provided.
 - Real Instagram work remains in `images/` for future use, but the homepage no longer includes a portfolio gallery.
