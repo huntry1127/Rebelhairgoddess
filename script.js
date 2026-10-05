@@ -1,5 +1,5 @@
-// Replace once the client's direct GlossGenius booking URL is confirmed.
-const GLOSSGENIUS_BOOKING_URL = "https://www.glossgenius.com/";
+// Direct Rebel Hair Goddess booking website.
+const GLOSSGENIUS_BOOKING_URL = "https://rebelhairgoddess.glossgenius.com/";
 document.querySelectorAll('[data-booking-link]').forEach(link => { link.href = GLOSSGENIUS_BOOKING_URL; });
 const button = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.site-nav');
